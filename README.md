@@ -1,2 +1,2 @@
 # alx-intermediate-frontend
-0x00-semantic_html
+Structured HTML Document Using Semantic Elements
