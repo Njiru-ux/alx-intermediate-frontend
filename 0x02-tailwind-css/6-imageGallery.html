@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Grid & Flexbox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <header class="bg-blue-500 text-white p-4 rounded-lg">
+        <h1 class="text-3xl font-bold">Image Gallery with Grid & Flexbox</h1>
+        <p class="mt-2">Combining Grid, Flexbox, and a responsive image gallery</p>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex space-x-4">
+            <div class="p-4 bg-red-200 w-1/2 rounded-lg">
+                <h2 class="text-xl font-bold mb-2">Flexbox Item 1</h2>
+                <p>This is the first flexbox item. It uses bg-red-200 and takes half the width of its container.</p>
+            </div>
+            <div class="p-4 bg-red-400 w-1/2 rounded-lg">
+                <h2 class="text-xl font-bold mb-2">Flexbox Item 2</h2>
+                <p>This is the second flexbox item. It uses bg-red-400 and also takes half the width.</p>
+            </div>
+        </section>
+        <aside class="bg-green-200 p-4 rounded-lg">
+            <h2 class="text-xl font-bold mb-3">Sidebar</h2>
+            <ul class="space-y-2">
+                <li class="p-2 bg-green-100 rounded">Navigation Item 1</li>
+                <li class="p-2 bg-green-100 rounded">Navigation Item 2</li>
+                <li class="p-2 bg-green-100 rounded">Navigation Item 3</li>
+                <li class="p-2 bg-green-100 rounded">Navigation Item 4</li>
+            </ul>
+            <p class="mt-4">On large screens, this sidebar appears on the right. On mobile, it stacks below.</p>
+        </aside>
+    </main>
+
+    <!-- Image Gallery Section -->
+    <section class="mt-8">
+        <h2 class="text-2xl font-bold mb-6 text-center">Responsive Image Gallery</h2>
+        <p class="text-gray-600 text-center mb-6">This gallery uses CSS Grid to arrange images in a responsive layout</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Image 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" 
+                     alt="Mountain landscape" 
+                     class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Mountain View</h3>
+                    <p class="text-gray-600">Beautiful mountain landscape with clear sky.</p>
+                </div>
+            </div>
+            
+            <!-- Image 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000" 
+                     alt="Lake view" 
+                     class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Lake Serenity</h3>
+                    <p class="text-gray-600">Calm lake surrounded by trees and mountains.</p>
+                </div>
+            </div>
+            
+            <!-- Image 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1475924156734-496f6cac6ec1" 
+                     alt="Beach sunset" 
+                     class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Beach Sunset</h3>
+                    <p class="text-gray-600">Stunning sunset over the ocean horizon.</p>
+                </div>
+            </div>
+            
+            <!-- Image 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" 
+                     alt="Forest path" 
+                     class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Forest Path</h3>
+                    <p class="text-gray-600">Mysterious path through a dense green forest.</p>
+                </div>
+            </div>
+            
+            <!-- Image 5 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" 
+                     alt="Desert dunes" 
+                     class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Desert Dunes</h3>
+                    <p class="text-gray-600">Golden sand dunes under the bright sun.</p>
+                </div>
+            </div>
+            
+            <!-- Image 6 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba" 
+                     alt="Northern lights" 
+                     class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-lg mb-2">Northern Lights</h3>
+                    <p class="text-gray-600">Colorful aurora borealis in the night sky.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+            <p class="text-gray-500">Gallery layout: 1 column on mobile, 2 columns on tablet, 3 columns on desktop</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white p-4 mt-8 rounded-lg">
+        <p class="text-center">&copy; 2024 John Doe's Blog</p>
+        <p class="text-center text-gray-300 text-sm mt-1">Combining Grid, Flexbox, and responsive image gallery</p>
+    </footer>
+</body>
+</html>
