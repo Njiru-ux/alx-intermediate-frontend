@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navigation Bar</title>
+    <link href="./src/output.css" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <header class="mb-4">
+        <h1 class="text-3xl font-bold">Flexbox Navigation Bar</h1>
+    </header>
+
+    <nav class="flex space-x-5 justify-center bg-gray-300 text-white p-4 rounded-lg">
+        <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Home</a>
+        <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">About</a>
+        <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Services</a>
+        <a href="#" class="px-2 text-xl hover:bg-gray-500 p-2 rounded-lg">Contact</a>
+    </nav>
+</body>
+</html>
+
+    <div class="mt-8">
+        <h2 class="text-2xl font-bold mb-4">Test Content</h2>
+        <p class="mb-4">Resize your browser window to see the navigation bar change from horizontal to vertical.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="p-4 bg-blue-100 rounded-lg">
+                <h3 class="font-bold text-lg mb-2">Desktop View</h3>
+                <p>On screens wider than 768px, the navigation bar is horizontal with centered links.</p>
+            </div>
+            <div class="p-4 bg-green-100 rounded-lg">
+                <h3 class="font-bold text-lg mb-2">Mobile View</h3>
+                <p>On screens 768px or smaller, the navigation bar becomes vertical with left-aligned links.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
